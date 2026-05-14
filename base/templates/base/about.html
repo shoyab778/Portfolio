@@ -1,0 +1,124 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}About | Shoyab — AI Engineer{% endblock %}
+{% block content %}
+
+<div class="page-header">
+  <div class="container">
+    <div class="section-tag" style="margin:0 auto 20px;">About Me</div>
+    <h1 class="section-title">The Story Behind<br /><span class="gradient-text">the Engineer.</span></h1>
+    <p class="section-subtitle" style="margin:20px auto 0;text-align:center;max-width:560px;">B.Tech AI & ML student, deep learning practitioner, and builder of intelligent systems.</p>
+  </div>
+</div>
+
+<!-- BIO -->
+<section class="section" style="padding-top:40px;">
+  <div class="container">
+    <div class="about-grid">
+      <div data-aos="fade-right">
+        <div style="position:relative;display:inline-block;">
+          <div class="about-avatar" style="max-width:360px;width:100%;">🤖<div class="about-avatar-ring"></div></div>
+          <div class="about-badge" style="bottom:16px;right:-10px;">
+            <div class="about-badge-icon">📍</div>
+            <div><div class="about-badge-text" style="font-size:15px;">India</div><div class="about-badge-label">Available for Remote</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="about-text" data-aos="fade-left">
+        <div class="section-tag">My Journey</div>
+        <h2 class="section-title" style="font-size:clamp(28px,4vw,44px);">From curiosity to<br /><span class="gradient-text">production AI.</span></h2>
+        <p>It started with a single question in high school: "Can machines actually think?" That question led me to pursue B.Tech in Artificial Intelligence & Machine Learning — and I haven't looked back since.</p>
+        <p>Over the past three years, I've built and deployed real AI systems — not just toy demos. From a seizure prediction model running at 94.7% accuracy on EEG signals, to a BERT-based fake news detector achieving 96.2% F1 score, to generative image pipelines powered by Stable Diffusion.</p>
+        <p>My approach: understand the research deeply, implement it cleanly, and ship it to production reliably. I care about both the math and the engineering.</p>
+        <div style="margin-top:32px;display:flex;gap:16px;flex-wrap:wrap;">
+          <a href="{% url 'projects' %}" class="btn btn-primary">See My Work →</a>
+          <a href="{% url 'contact' %}" class="btn btn-outline">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION & EXPERIENCE -->
+<section class="section" style="background:rgba(255,255,255,0.01);padding:80px 0;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;" class="edu-grid">
+      <div data-aos="fade-right">
+        <div class="section-tag">Education</div>
+        <h2 class="section-title" style="font-size:clamp(28px,3vw,40px);margin-bottom:40px;">Academic <span class="gradient-text">Foundation.</span></h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2021 — 2025</div>
+            <div class="timeline-title">B.Tech in AI & Machine Learning</div>
+            <div class="timeline-sub">University Name · CGPA: 9.2/10</div>
+            <div class="timeline-desc">Specialized in Deep Learning, NLP, Computer Vision, Reinforcement Learning, and MLOps. Completed coursework in Advanced Machine Learning, AI Ethics.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2019 — 2021</div>
+            <div class="timeline-title">Intermediate[IPE] - MPC</div>
+            <div class="timeline-sub">Narayana Junior college · 91.3%</div>
+            <div class="timeline-desc">Focused on Mathematics, Chemistry.</div>
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-left">
+        <div class="section-tag">Experience</div>
+        <h2 class="section-title" style="font-size:clamp(28px,3vw,40px);margin-bottom:40px;">Real-World <span class="gradient-text">Impact.</span></h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2024</div>
+            <div class="timeline-title">ML Engineer Intern</div>
+            <div class="timeline-sub">CodSoft</div>
+            <div class="timeline-desc">Built Machine Learning projects using Python, TensorFlow, and scikit-learn. Developed a customer churn prediction model that achieved 87% accuracy, leading to a 15% reduction in churn for the client.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2024</div>
+            <div class="timeline-title">Data Analytics with Tableau</div>
+            <div class="timeline-sub">SmartBridge</div>
+            <div class="timeline-desc">Using Tableau, I created interactive dashboards that visualized key business metrics, enabling stakeholders to make data-driven decisions. My work led to a 20% improvement in sales forecasting accuracy.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2025</div>
+            <div class="timeline-title">Generative AI</div>
+            <div class="timeline-sub">SmartBridge</div>
+            <div class="timeline-desc">Using Gemini API key to build a model that can generate descriptions for historical images that are given by the user. This project is still in development and is expected to be completed by the end of 2025.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="section" style="padding:80px 0 120px;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:60px;">
+      <div class="section-tag" style="margin:0 auto 16px;" data-aos="fade-up">Philosophy</div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">How I <span class="gradient-text">approach</span> problems.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;">
+      <div class="skill-category" data-aos="fade-up">
+        <div style="font-size:40px;margin-bottom:20px;">🔬</div>
+        <h3 style="font-family:var(--font-display);font-size:18px;font-weight:700;margin-bottom:12px;">Research-First</h3>
+        <p style="color:var(--text-secondary);font-size:14px;line-height:1.7;">I read papers before I write code. Understanding the "why" behind an architecture leads to better engineering decisions.</p>
+      </div>
+      <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+        <div style="font-size:40px;margin-bottom:20px;">⚙️</div>
+        <h3 style="font-family:var(--font-display);font-size:18px;font-weight:700;margin-bottom:12px;">Production-Ready</h3>
+        <p style="color:var(--text-secondary);font-size:14px;line-height:1.7;">A model that only works in a notebook isn't done. I care about latency, scalability, monitoring, and reliability in production.</p>
+      </div>
+      <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+        <div style="font-size:40px;margin-bottom:20px;">📊</div>
+        <h3 style="font-family:var(--font-display);font-size:18px;font-weight:700;margin-bottom:12px;">Data-Obsessed</h3>
+        <p style="color:var(--text-secondary);font-size:14px;line-height:1.7;">Great models start with great data. I spend significant time on EDA, preprocessing, augmentation, and understanding data distributions.</p>
+      </div>
+      <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+        <div style="font-size:40px;margin-bottom:20px;">🤝</div>
+        <h3 style="font-family:var(--font-display);font-size:18px;font-weight:700;margin-bottom:12px;">Clear Communication</h3>
+        <p style="color:var(--text-secondary);font-size:14px;line-height:1.7;">AI is only valuable if stakeholders understand it. I translate complex model behavior into clear business insights.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

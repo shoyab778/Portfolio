@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Projects | Shoyab — AI Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#080810;--bg-card:#0f0f1a;--border:rgba(255,255,255,.07);--border-hover:rgba(255,255,255,.14);--violet:#7c3aed;--cyan:#06b6d4;--emerald:#34d399;--amber:#fbbf24;--grad-primary:linear-gradient(135deg,var(--violet),var(--cyan));--grad-text:linear-gradient(135deg,#a78bfa 0%,#38bdf8 50%,#34d399 100%);--text-primary:#f1f5f9;--text-secondary:#94a3b8;--text-muted:#475569;--font-display:'Syne',sans-serif;--font-body:'DM Sans',sans-serif;--font-mono:'JetBrains Mono',monospace;--radius-md:14px;--radius-xl:28px;--ease:cubic-bezier(.4,0,.2,1);--duration:300ms}
+html{scroll-behavior:smooth}body{font-family:var(--font-body);background:var(--bg);color:var(--text-primary);line-height:1.6;overflow-x:hidden}a{text-decoration:none;color:inherit}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+.gradient-text{background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.section-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--cyan);background:rgba(6,182,212,.08);border:1px solid rgba(6,182,212,.2);padding:6px 14px;border-radius:50px}.section-tag::before{content:'//';opacity:.5}
+.section-title{font-family:var(--font-display);font-size:clamp(32px,5vw,56px);font-weight:800;line-height:1.1;letter-spacing:-1px;margin:16px 0}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 24px;transition:background var(--duration) var(--ease)}.navbar.scrolled{background:rgba(8,8,16,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav-logo{font-family:var(--font-display);font-size:22px;font-weight:800;background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-links{display:flex;list-style:none;gap:36px}.nav-links a{font-size:14px;font-weight:500;color:var(--text-secondary);transition:color var(--duration);position:relative}.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--grad-primary);transform:scaleX(0);transition:transform var(--duration) var(--ease)}.nav-links a:hover,.nav-links a.active{color:var(--text-primary)}.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.btn-nav{font-family:var(--font-mono);font-size:12px;padding:10px 20px;border-radius:50px;background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.3);color:#a78bfa;transition:all var(--duration) var(--ease)}.btn-nav:hover{background:rgba(124,58,237,.25);border-color:rgba(124,58,237,.6);color:#c4b5fd}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}.hamburger span{display:block;width:22px;height:2px;background:var(--text-primary);border-radius:2px;transition:all var(--duration) var(--ease)}
+.mobile-menu{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:rgba(8,8,16,.98);backdrop-filter:blur(20px);border-left:1px solid var(--border);z-index:999;display:flex;flex-direction:column;padding:100px 32px 32px;gap:8px;transition:right var(--duration) var(--ease)}.mobile-menu.open{right:0}.mobile-menu a{font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--text-secondary);padding:12px 0;border-bottom:1px solid var(--border);transition:color var(--duration)}.mobile-menu a:hover,.mobile-menu a.active{color:var(--text-primary)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:50px;font-family:var(--font-display);font-size:15px;font-weight:600;cursor:pointer;transition:all var(--duration) var(--ease);border:none}.btn-primary{background:var(--grad-primary);color:#fff;box-shadow:0 0 32px rgba(124,58,237,.3)}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 48px rgba(124,58,237,.5)}.btn-outline{background:transparent;color:var(--text-primary);border:1px solid var(--border-hover)}.btn-outline:hover{border-color:rgba(124,58,237,.5);background:rgba(124,58,237,.06);transform:translateY(-2px)}
+.page-header{padding:160px 0 80px;text-align:center;position:relative;overflow:hidden}.page-header::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(124,58,237,.12),transparent 70%);pointer-events:none}
+.filter-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:48px}
+.filter-tab{font-family:var(--font-mono);font-size:12px;letter-spacing:.05em;padding:8px 20px;border-radius:50px;background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--text-secondary);cursor:pointer;transition:all var(--duration) var(--ease)}.filter-tab:hover{border-color:var(--border-hover);color:var(--text-primary)}.filter-tab.active{background:rgba(124,58,237,.15);border-color:rgba(124,58,237,.4);color:#a78bfa}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px}
+.project-card-wrap{transition:all var(--duration) var(--ease)}
+.project-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden;transition:all var(--duration) var(--ease)}.project-card:hover{border-color:rgba(124,58,237,.3);transform:translateY(-6px);box-shadow:0 24px 64px rgba(0,0,0,.4)}
+.project-image{height:200px;display:flex;align-items:center;justify-content:center;font-size:72px;position:relative;overflow:hidden}.project-image-overlay{position:absolute;inset:0;background:rgba(0,0,0,.2)}
+.project-body{padding:24px}.project-category{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:10px}
+.project-title{font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:10px;letter-spacing:-.3px}.project-desc{font-size:14px;color:var(--text-secondary);line-height:1.7;margin-bottom:16px}
+.project-tech{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}.tech-tag{font-family:var(--font-mono);font-size:11px;padding:4px 10px;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:50px;color:var(--text-secondary)}
+.project-links{display:flex;gap:12px}.project-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--text-secondary);transition:color var(--duration)}.project-link:hover{color:var(--text-primary)}
+.featured-badge{font-family:var(--font-mono);font-size:10px;color:var(--amber);background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.2);padding:3px 10px;border-radius:50px}
+footer{padding:40px 0;border-top:1px solid var(--border)}.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}.footer-logo{font-family:var(--font-display);font-size:18px;font-weight:800;background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.footer-text{font-size:13px;color:var(--text-muted)}.footer-socials{display:flex;gap:12px}.social-btn{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-secondary);transition:all var(--duration) var(--ease)}.social-btn:hover{border-color:rgba(124,58,237,.4);background:rgba(124,58,237,.08);color:var(--text-primary);transform:translateY(-2px)}
+@media(max-width:768px){.nav-links,.nav-cta{display:none}.hamburger{display:flex}.projects-grid{grid-template-columns:1fr}.footer-inner{justify-content:center;text-align:center}}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+  <a href="home.html" class="nav-logo">Shoyab.</a>
+  <ul class="nav-links"><li><a href="home.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html" class="active">Projects</a></li><li><a href="skills.html">Skills</a></li><li><a href="contact.html">Contact</a></li></ul>
+  <div class="nav-cta"><a href="contact.html" class="btn-nav">Hire Me ✦</a></div>
+  <button class="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></nav>
+<div class="mobile-menu"><a href="home.html">Home</a><a href="about.html">About</a><a href="projects.html" class="active">Projects</a><a href="skills.html">Skills</a><a href="contact.html">Contact</a></div>
+<main>
+<div class="page-header"><div class="container">
+  <div class="section-tag" style="margin:0 auto 20px;">Portfolio</div>
+  <h1 class="section-title">AI Projects That<br/><span class="gradient-text">Actually Ship.</span></h1>
+  <p style="font-size:17px;color:var(--text-secondary);line-height:1.7;margin:20px auto 0;text-align:center;max-width:520px;">Production-grade models across deep learning, NLP, computer vision, and generative AI.</p>
+</div></div>
+
+<section style="padding:40px 0 120px;"><div class="container">
+  <div class="filter-tabs" data-aos="fade-up">
+    <button class="filter-tab active" data-cat="all">All Projects</button>
+    <button class="filter-tab" data-cat="dl">Deep Learning</button>
+    <button class="filter-tab" data-cat="nlp">NLP</button>
+    <button class="filter-tab" data-cat="cv">Computer Vision</button>
+    <button class="filter-tab" data-cat="gen">Generative AI</button>
+    <button class="filter-tab" data-cat="ml">Machine Learning</button>
+  </div>
+  <div class="projects-grid" id="grid">
+
+    <div class="project-card-wrap" data-cat="dl" data-aos="fade-up">
+      <div class="project-card"><div class="project-image" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);"><div class="project-image-overlay"></div><span style="position:relative;z-index:1;filter:drop-shadow(0 4px 12px rgba(0,0,0,.3));">🧠</span></div>
+      <div class="project-body"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;"><div class="project-category">Deep Learning</div><span class="featured-badge">★ Featured</span></div>
+      <h3 class="project-title">Seizure Prediction System</h3><p class="project-desc">Real-time epilepsy seizure prediction using EEG signals with deep learning. Achieved 94.7% accuracy using CNN-LSTM hybrid architecture on the CHB-MIT scalp EEG dataset.</p>
+      <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">TensorFlow</span><span class="tech-tag">CNN-LSTM</span><span class="tech-tag">EEG</span><span class="tech-tag">Signal Processing</span><span class="tech-tag">NumPy</span></div>
+      <div class="project-links"><a href="https://github.com/shoyab778" target="_blank" rel="noopener" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</a></div></div></div>
+    </div>
+
+    <div class="project-card-wrap" data-cat="nlp" data-aos="fade-up" data-aos-delay="100">
+      <div class="project-card"><div class="project-image" style="background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);"><div class="project-image-overlay"></div><span style="position:relative;z-index:1;filter:drop-shadow(0 4px 12px rgba(0,0,0,.3));">📰</span></div>
+      <div class="project-body"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;"><div class="project-category">NLP</div><span class="featured-badge">★ Featured</span></div>
+      <h3 class="project-title">Fake News Detector</h3><p class="project-desc">BERT-based NLP pipeline for misinformation detection with 96.2% F1 score. Fine-tuned on LIAR and FakeNewsNet datasets with attention visualization.</p>
+      <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">BERT</span><span class="tech-tag">Transformers</span><span class="tech-tag">HuggingFace</span><span class="tech-tag">PyTorch</span><span class="tech-tag">Flask</span></div>
+      <div class="project-links"><a href="https://github.com/shoyab778" target="_blank" rel="noopener" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</a></div></div></div>
+    </div>
+
+    <div class="project-card-wrap" data-cat="gen" data-aos="fade-up" data-aos-delay="200">
+      <div class="project-card"><div class="project-image" style="background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);"><div class="project-image-overlay"></div><span style="position:relative;z-index:1;filter:drop-shadow(0 4px 12px rgba(0,0,0,.3));">🎨</span></div>
+      <div class="project-body"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;"><div class="project-category">Generative AI</div><span class="featured-badge">★ Featured</span></div>
+      <h3 class="project-title">AI Image Generator</h3><p class="project-desc">Stable Diffusion-based text-to-image generation system with custom LoRA fine-tuning. Supports style transfer, inpainting, and upscaling pipelines.</p>
+      <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">Stable Diffusion</span><span class="tech-tag">LoRA</span><span class="tech-tag">CLIP</span><span class="tech-tag">Diffusers</span><span class="tech-tag">Gradio</span></div>
+      <div class="project-links"><a href="https://github.com/shoyab778" target="_blank" rel="noopener" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</a></div></div></div>
+    </div>
+
+    <div class="project-card-wrap" data-cat="cv" data-aos="fade-up">
+      <div class="project-card"><div class="project-image" style="background:linear-gradient(135deg,#43e97b 0%,#38f9d7 100%);"><div class="project-image-overlay"></div><span style="position:relative;z-index:1;filter:drop-shadow(0 4px 12px rgba(0,0,0,.3));">👁️</span></div>
+      <div class="project-body"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;"><div class="project-category">Computer Vision</div><span class="featured-badge">★ Featured</span></div>
+      <h3 class="project-title">Real-Time Object Detection</h3><p class="project-desc">YOLOv8-based custom object detection for industrial safety monitoring. Trained on 15K+ annotated images with 89ms inference on edge devices.</p>
+      <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">YOLOv8</span><span class="tech-tag">OpenCV</span><span class="tech-tag">PyTorch</span><span class="tech-tag">Roboflow</span><span class="tech-tag">TensorRT</span></div>
+      <div class="project-links"><a href="https://github.com/shoyab778" target="_blank" rel="noopener" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</a></div></div></div>
+    </div>
+
+    <div class="project-card-wrap" data-cat="nlp" data-aos="fade-up" data-aos-delay="100">
+      <div class="project-card"><div class="project-image" style="background:linear-gradient(135deg,#fa709a 0%,#fee140 100%);"><div class="project-image-overlay"></div><span style="position:relative;z-index:1;filter:drop-shadow(0 4px 12px rgba(0,0,0,.3));">💬</span></div>
+      <div class="project-body"><div style="margin-bottom:12px;"><div class="project-category">NLP</div></div>
+      <h3 class="project-title">Sentiment Analysis API</h3><p class="project-desc">Production-grade multilingual sentiment analysis REST API serving 10K+ requests/day. Built with FastAPI, deployed on AWS with auto-scaling.</p>
+      <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">FastAPI</span><span class="tech-tag">BERT</span><span class="tech-tag">Docker</span><span class="tech-tag">AWS</span><span class="tech-tag">Redis</span></div>
+      <div class="project-links"><a href="https://github.com/shoyab778" target="_blank" rel="noopener" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</a></div></div></div>
+    </div>
+
+    <div class="project-card-wrap" data-cat="cv" data-aos="fade-up" data-aos-delay="200">
+      <div class="project-card"><div class="project-image" style="background:linear-gradient(135deg,#a18cd1 0%,#fbc2eb 100%);"><div class="project-image-overlay"></div><span style="position:relative;z-index:1;filter:drop-shadow(0 4px 12px rgba(0,0,0,.3));">🔬</span></div>
+      <div class="project-body"><div style="margin-bottom:12px;"><div class="project-category">Computer Vision</div></div>
+      <h3 class="project-title">Medical Image Segmentation</h3><p class="project-desc">U-Net based semantic segmentation for tumor detection in MRI scans. Dice score of 0.91 on BraTS2023 benchmark, published research paper.</p>
+      <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">U-Net</span><span class="tech-tag">PyTorch</span><span class="tech-tag">MONAI</span><span class="tech-tag">ITK</span><span class="tech-tag">SimpleITK</span></div>
+      <div class="project-links"><a href="https://github.com/shoyab778" target="_blank" rel="noopener" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</a></div></div></div>
+    </div>
+
+  </div>
+
+  <div style="margin-top:80px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xl);padding:60px;text-align:center;" data-aos="fade-up">
+    <div style="font-size:40px;margin-bottom:20px;">🤝</div>
+    <h2 style="font-family:var(--font-display);font-size:32px;font-weight:800;margin-bottom:16px;letter-spacing:-.5px;">Want to collaborate?</h2>
+    <p style="color:var(--text-secondary);max-width:480px;margin:0 auto 32px;line-height:1.7;">I'm always open to interesting AI/ML projects, research opportunities, and challenging engineering problems.</p>
+    <a href="contact.html" class="btn btn-primary">Start a Conversation →</a>
+  </div>
+</div></section>
+</main>
+<footer><div class="container"><div class="footer-inner">
+  <a href="home.html" class="footer-logo">Shoyab.</a>
+  <p class="footer-text">© 2025 Shoyab. Built with Django. All rights reserved.</p>
+  <div class="footer-socials">
+    <a href="https://github.com/shoyab778" target="_blank" rel="noopener" class="social-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
+    <a href="https://www.linkedin.com/in/shaik-shoyab-03863b200/" target="_blank" rel="noopener" class="social-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    <a href="mailto:smdshoyab07@gmail.com" class="social-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+  </div>
+</div></div></footer>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({duration:800,easing:'ease-out-cubic',once:true,offset:80});
+const navbar=document.querySelector('.navbar');
+window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>40),{passive:true});
+const hamburger=document.querySelector('.hamburger'),mobileMenu=document.querySelector('.mobile-menu');
+hamburger.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');hamburger.setAttribute('aria-expanded',open);const s=hamburger.querySelectorAll('span');if(open){s[0].style.transform='translateY(7px) rotate(45deg)';s[1].style.opacity='0';s[2].style.transform='translateY(-7px) rotate(-45deg)';}else{s.forEach(x=>{x.style.transform='';x.style.opacity='';})}});
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobileMenu.classList.remove('open');hamburger.setAttribute('aria-expanded',false);hamburger.querySelectorAll('span').forEach(s=>{s.style.transform='';s.style.opacity='';})}));
+document.querySelectorAll('.filter-tab').forEach(tab=>{tab.addEventListener('click',()=>{document.querySelectorAll('.filter-tab').forEach(t=>t.classList.remove('active'));tab.classList.add('active');const cat=tab.dataset.cat;document.querySelectorAll('.project-card-wrap').forEach(c=>{c.style.display=(cat==='all'||c.dataset.cat===cat)?'':'none';});});});
+document.querySelectorAll('.project-card').forEach(card=>{card.addEventListener('mousemove',e=>{const r=card.getBoundingClientRect();card.style.transform=`perspective(800px) rotateX(${((e.clientY-r.top)/r.height-.5)*-8}deg) rotateY(${((e.clientX-r.left)/r.width-.5)*8}deg) translateY(-6px)`;});card.addEventListener('mouseleave',()=>{card.style.transform='';});});
+</script>
+</body></html>

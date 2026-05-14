@@ -1,0 +1,68 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}Skills | Shoyab — AI Engineer{% endblock %}
+{% block content %}
+
+<div class="page-header">
+  <div class="container">
+    <div class="section-tag" style="margin:0 auto 20px;">Technical Skills</div>
+    <h1 class="section-title">Full AI/ML<br /><span class="gradient-text">Tech Stack.</span></h1>
+    <p class="section-subtitle" style="margin:20px auto 0;text-align:center;max-width:520px;">From Python to PyTorch, BERT to Docker — the complete toolkit of a production AI engineer.</p>
+  </div>
+</div>
+
+<section class="section" style="padding-top:40px;">
+  <div class="container">
+
+    <div class="skills-container" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr));">
+      {% for category, skill_list in skills.items %}
+      <div class="skill-category" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}00">
+        <div class="skill-category-title">
+          {% if category == 'languages' %}🐍 Programming Languages
+          {% elif category == 'aiml' %}🧠 AI / Machine Learning
+          {% elif category == 'frameworks' %}🔥 Frameworks & Libraries
+          {% else %}🛠️ Tools & DevOps{% endif %}
+        </div>
+        {% for skill in skill_list %}
+        <div class="skill-item">
+          <div class="skill-header">
+            <div class="skill-name"><span class="skill-icon">{{ skill.icon }}</span><span>{{ skill.name }}</span></div>
+            <span class="skill-pct">{{ skill.proficiency }}%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="{{ skill.proficiency }}"></div></div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Certifications -->
+    <div style="margin-top:80px;">
+      <div style="text-align:center;margin-bottom:48px;">
+        <div class="section-tag" style="margin:0 auto 16px;" data-aos="fade-up">Achievements</div>
+        <h2 class="section-title" style="font-size:clamp(28px,4vw,44px);" data-aos="fade-up" data-aos-delay="100">Certifications & <span class="gradient-text">Recognition.</span></h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;">
+        <div class="highlight-item" style="padding:24px;" data-aos="fade-up">
+          <div class="highlight-icon" style="width:48px;height:48px;font-size:20px;">🏆</div>
+          <div><div style="font-weight:600;font-size:14px;">Deep Learning Specialization</div><div style="color:var(--text-muted);font-size:12px;margin-top:4px;">Coursera · 2023</div></div>
+        </div>
+        <div class="highlight-item" style="padding:24px;" data-aos="fade-up" data-aos-delay="100">
+          <div class="highlight-icon" style="width:48px;height:48px;font-size:20px;">🎖️</div>
+          <div><div style="font-weight:600;font-size:14px;">Google Cloud Certificate</div><div style="color:var(--text-muted);font-size:12px;margin-top:4px;">Google · 2025</div></div>
+        </div>
+        <div class="highlight-item" style="padding:24px;" data-aos="fade-up" data-aos-delay="200">
+          <div class="highlight-icon" style="width:48px;height:48px;font-size:20px;">📝</div>
+          <div><div style="font-weight:600;font-size:14px;">Samsleshana 2024</div><div style="color:var(--text-muted);font-size:12px;margin-top:4px;">AR VR Presentation</div></div>
+        </div>
+        <div class="highlight-item" style="padding:24px;" data-aos="fade-up" data-aos-delay="300">
+          <div class="highlight-icon" style="width:48px;height:48px;font-size:20px;">🥇</div>
+          <div><div style="font-weight:600;font-size:14px;">CodingContest Winner</div><div style="color:var(--text-muted);font-size:12px;margin-top:4px;">CodingContest · 1st Place · 2025</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

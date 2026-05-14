@@ -1,0 +1,93 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}Contact | Shoyab — AI Engineer{% endblock %}
+{% block content %}
+
+<div class="page-header">
+  <div class="container">
+    <div class="section-tag" style="margin:0 auto 20px;">Contact</div>
+    <h1 class="section-title">Let's Build<br /><span class="gradient-text">Something Great.</span></h1>
+    <p class="section-subtitle" style="margin:20px auto 0;text-align:center;max-width:520px;">Open to full-time roles, research collaborations, and freelance projects. I respond within 24 hours.</p>
+  </div>
+</div>
+
+<section class="section" style="padding-top:40px;">
+  <div class="container">
+    <div class="contact-grid" data-aos="fade-up">
+
+      <div class="contact-info">
+        <h3>Ready to connect?</h3>
+        <p>Whether you're hiring an AI engineer, building an ML-powered product, or want to collaborate on research — let's talk. I'm always excited about challenging, high-impact work.</p>
+        <div class="contact-links">
+          <a href="mailto:smdshoyab07@gmail.com" class="contact-link-item">
+            <div class="contact-link-icon">📧</div>
+            <div><div class="contact-link-text">Email</div><div class="contact-link-sub">smdshoyab07@gmail.com</div></div>
+          </a>
+          <a href="https://www.linkedin.com/in/shaik-shoyab-03863b200/" target="_blank" rel="noopener" class="contact-link-item">
+            <div class="contact-link-icon">💼</div>
+            <div><div class="contact-link-text">LinkedIn</div><div class="contact-link-sub">shaik-shoyab-03863b200</div></div>
+          </a>
+          <a href="https://github.com/shoyab778" target="_blank" rel="noopener" class="contact-link-item">
+            <div class="contact-link-icon">⚡</div>
+            <div><div class="contact-link-text">GitHub</div><div class="contact-link-sub">github.com/shoyab778</div></div>
+          </a>
+          <a href="tel:+919182226284" class="contact-link-item">
+            <div class="contact-link-icon">📞</div>
+            <div><div class="contact-link-text">Phone</div><div class="contact-link-sub">+91 9182226284</div></div>
+          </a>
+        </div>
+        <div style="margin-top:32px;background:rgba(52,211,153,0.05);border:1px solid rgba(52,211,153,0.2);border-radius:var(--radius-md);padding:20px;display:flex;align-items:center;gap:16px;">
+          <div style="width:12px;height:12px;border-radius:50%;background:var(--emerald);box-shadow:0 0 12px var(--emerald);flex-shrink:0;animation:pulse 2s infinite;"></div>
+          <div>
+            <div style="font-weight:600;font-size:14px;color:var(--emerald);">Available for Opportunities</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">Full-time · Remote / Hybrid</div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" method="POST" action="{% url 'contact' %}">
+        {% csrf_token %}
+        <div class="form-row">
+          <div class="form-group">{{ form.name }}{% if form.name.errors %}<div class="form-error">{{ form.name.errors.0 }}</div>{% endif %}</div>
+          <div class="form-group">{{ form.email }}{% if form.email.errors %}<div class="form-error">{{ form.email.errors.0 }}</div>{% endif %}</div>
+        </div>
+        <div class="form-group">{{ form.subject }}</div>
+        <div class="form-group">{{ form.message }}{% if form.message.errors %}<div class="form-error">{{ form.message.errors.0 }}</div>{% endif %}</div>
+        <button type="submit" class="form-submit">
+          <span>Send Message</span><span class="submit-icon">→</span>
+        </button>
+        <p style="font-size:12px;color:var(--text-muted);text-align:center;margin-top:16px;">🔒 Your data is safe. I never spam or share your info.</p>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding:60px 0 120px;">
+  <div class="container">
+    <div style="max-width:720px;margin:0 auto;">
+      <h2 style="font-family:var(--font-display);font-size:28px;font-weight:800;margin-bottom:40px;text-align:center;" data-aos="fade-up">Frequently Asked <span class="gradient-text">Questions.</span></h2>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div class="skill-category" style="padding:24px 28px;" data-aos="fade-up">
+          <h4 style="font-family:var(--font-display);font-size:16px;font-weight:700;margin-bottom:10px;">Are you open to full-time roles?</h4>
+          <p style="color:var(--text-secondary);font-size:14px;line-height:1.7;margin:0;">Yes! I'm actively looking for full-time AI/ML Engineering positions. Remote and hybrid roles across India are preferred.</p>
+        </div>
+        <div class="skill-category" style="padding:24px 28px;" data-aos="fade-up" data-aos-delay="100">
+          <h4 style="font-family:var(--font-display);font-size:16px;font-weight:700;margin-bottom:10px;">Do you take freelance AI projects?</h4>
+          <p style="color:var(--text-secondary);font-size:14px;line-height:1.7;margin:0;">Absolutely. I take on select freelance projects — model development, API integration, NLP pipelines, and computer vision systems. Minimum engagement: 2 weeks.</p>
+        </div>
+        <div class="skill-category" style="padding:24px 28px;" data-aos="fade-up" data-aos-delay="200">
+          <h4 style="font-family:var(--font-display);font-size:16px;font-weight:700;margin-bottom:10px;">How quickly do you respond?</h4>
+          <p style="color:var(--text-secondary);font-size:14px;line-height:1.7;margin:0;">Within 24 hours on business days. For urgent matters, LinkedIn direct messages tend to get the fastest response.</p>
+        </div>
+        <div class="skill-category" style="padding:24px 28px;" data-aos="fade-up" data-aos-delay="300">
+          <h4 style="font-family:var(--font-display);font-size:16px;font-weight:700;margin-bottom:10px;">What kind of projects do you prefer?</h4>
+          <p style="color:var(--text-secondary);font-size:14px;line-height:1.7;margin:0;">I love projects that push the boundaries — healthcare AI, real-time inference systems, LLM-powered products, and anything where the model actually matters to end users.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
